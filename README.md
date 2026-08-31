@@ -30,7 +30,7 @@ link -- https://www.kaggle.com/datasets/costinflation/american-cheese-prices-raw
 Databricks Free Edition, Python, pandas, PySpark, Delta Lake
 
 ## Pipeline Work flow
-**                 **RAW CSV**
+          **RAW CSV**
                     │
                     ▼
          ** Databricks Volume**
@@ -40,7 +40,7 @@ Databricks Free Edition, Python, pandas, PySpark, Delta Lake
                     │
           ┌─────────┴─────────┐
           ▼                   ▼
-  **  Data Profiling       Data Cleaning**
+    Data Profiling       Data Cleaning**
           │                   │
           │            ┌──────┴──────┐
           │     **       ▼             ▼
@@ -59,6 +59,6 @@ Databricks Free Edition, Python, pandas, PySpark, Delta Lake
                  └─────┬─────┘
                        ▼
                 Spark DataFrame
-                       │
+                       │**
                        ▼
                   Delta Tables**
