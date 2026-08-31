@@ -28,3 +28,37 @@ link -- https://www.kaggle.com/datasets/costinflation/american-cheese-prices-raw
 
 ## Tech Stack
 Databricks Free Edition, Python, pandas, PySpark, Delta Lake
+
+## Pipeline Work flow
+**                 **RAW CSV**
+                    │
+                    ▼
+         ** Databricks Volume**
+                    │
+                    ▼
+            ** Pandas DataFrame****
+                    │
+          ┌─────────┴─────────┐
+          ▼                   ▼
+  **  Data Profiling       Data Cleaning**
+          │                   │
+          │            ┌──────┴──────┐
+          │     **       ▼             ▼
+          │        Brand         Cheese Form
+          │       Extraction     Extraction
+          │            │             │
+          └────────────┴─────────────┘
+                       │
+                       ▼
+                 Aggregations
+                  /         \
+                 ▼           ▼
+          City + Week      Brand
+             Average      Statistics
+                 │           │
+                 └─────┬─────┘
+                       ▼
+                Spark DataFrame
+                       │
+                       ▼
+                  Delta Tables**
